@@ -1,0 +1,88 @@
+/* Color palette from colorhunt.co */
+
+:root {
+    --light: #F9F2ED;
+    --blue: #3AB0FF;
+    --orange: #FFB562;
+    --salmon: #F87474;
+}
+
+html * {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--light); 
+    font-weight: 600;
+}
+
+body {
+    margin: 20px;
+
+}
+
+header {
+    min-height: 100px;
+    background: #FFB562;
+    padding: 10px 0;
+}
+
+.title-name {
+    float: left;
+}
+
+
+.container {
+    float: right;
+    height: auto;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+
+
+nav li {
+    color: var(--salmon);
+    display: inline-block;
+    margin-left: 70px;
+    position: relative;
+    
+} 
+
+nav a {
+    text-decoration: none;
+    color: var(--salmon);
+    text-transform: uppercase;
+}
+
+section {
+    padding: 20px;
+}
+
+.about h2 {
+    float:left;
+}
+
+.section-name {
+    min-width: 40%;
+}
+
+section .section-body {
+    border-left: 1px solid var(--blue);
+    border-width: 5px;
+    margin-left: 100px;
+}
+
+section div p {
+    padding: 5px 20px 12px;
+}
+
+.card {
+    /*small cards*/
+}
+
+.work .cards:first-child {
+    /* big card */
+}
