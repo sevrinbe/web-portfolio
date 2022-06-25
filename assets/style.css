@@ -37,13 +37,7 @@ h1 {
     align-items: baseline;
 }
 
-h2 {
-    margin: 20px;
-}
 
-.container {
-    height: auto;
-}
 
 nav .nav-bar {
     display: flex;
@@ -56,6 +50,8 @@ nav ul {
     margin-top: 2em;
     margin-right: 2em;
     padding: 0;
+    position: absolute;
+    right: 5%;  
 }
 
 
@@ -71,16 +67,61 @@ a {
     color: var(--salmon);
 }
 
+.hero_img {
+    background-image: url(https://images.pexels.com/photos/844297/pexels-photo-844297.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 200px;
+    
+}
 
+.herotext {
+    position: absolute;
+    right: 5%;    
+    bottom: 5%;
+    border: 1px solid red;
+    background-color:red;
+    padding:20px;
+    color: blue;
+}
 
 section {
     padding: 20px;
+    position: relative;
 }
 
+.about {
+    flex-direction: column;
+}
+
+.section-title h2 {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+.section-title {
+    display: inline-block;
+    width: 10%;
+    position: relative;
+}
+
+.section-body {
+    display: inline-block;
+    width: 81%;
+}
+
+.container {
+    height: auto;
+}
+
+/* 
 .about .work h2 {
     float:left;
     min-width: 40px;
-}
+} */
 
 .body-content {
     max-width: 88%;
@@ -91,20 +132,36 @@ section {
 section .section-body {
     border-left: 1px solid var(--blue);
     border-width: 5px;
-    
-    margin-left: 100px;
 }
 
 section div p {
     padding: 5px 20px 12px;
 }
 
-.small-card {
-    /* small card */
+.work {
+    flex-direction: column;
+    display: table;
 }
 
-.big-card {
-    /* big card */
+.card:first-child {
+    width: 99%;
+    column-span: all;
+
+}
+
+.card {
+    width: 49%;
+    display: inline-block;
+    padding: .5%;
+
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: inline;
+    flex-flow: wrap;
+    aspect-ratio: 16 / 9;
 }
 
 h3 {
