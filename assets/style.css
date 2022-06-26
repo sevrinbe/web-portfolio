@@ -12,12 +12,14 @@ html * {
     font-weight: 600;
     margin: 0;
 
+}
 
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--light); 
-
 }
 
 header {
@@ -39,19 +41,19 @@ h1 {
 
 
 
-nav .nav-bar {
-    display: flex;
-    background-color: var(--orange);
-    float: right;
-
+.nav-bar {
+    position: absolute;
+    right: 5%;
+    top: 3%;
 }
 
+
 nav ul {
-    margin-top: 2em;
+    /* margin-top: 2em;
     margin-right: 2em;
     padding: 0;
     position: absolute;
-    right: 5%;  
+    right: 5%;   */
 }
 
 
@@ -87,30 +89,23 @@ a {
     color: blue;
 }
 
+
 section {
     padding: 20px;
     position: relative;
 }
 
 .about {
-    flex-direction: column;
-}
-
-.section-title h2 {
-    position: absolute;
-    top: 0%;
-    right: 0%;
+    display: flex;
+    flex-direction: inherit;
 }
 
 .section-title {
-    display: inline-block;
-    width: 10%;
-    position: relative;
+    width: 15%;
 }
 
 .section-body {
-    display: inline-block;
-    width: 81%;
+    width: 75%;
 }
 
 .container {
@@ -124,7 +119,7 @@ section {
 } */
 
 .body-content {
-    max-width: 88%;
+    max-width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -139,6 +134,11 @@ section div p {
 }
 
 .work {
+    display: flex;
+    flex-direction: inherit;
+}
+
+.cards {
     flex-direction: column;
     display: table;
 }
@@ -150,10 +150,36 @@ section div p {
 }
 
 .card {
+    border: solid 5px var(--orange);
     width: 49%;
     display: inline-block;
-    padding: .5%;
+    margin: .5%;
+    background-color: var(--orange);
+    position: relative;
+    box-sizing: border-box;
+    transition: .3s;
+}
 
+.card:hover {
+    opacity: 70%;
+    
+}
+
+.cardtext {
+    position: absolute;
+    bottom: 15%;
+    background-color: var(--orange);
+    text-align: center;
+    padding-top: 2px;
+}
+
+.cardtitle {
+    font-size: 1em;
+}
+
+.cardsubtext {
+    font-size: .75em;
+    font-weight: 100;
 }
 
 .card img {
@@ -179,16 +205,20 @@ footer li {
     text-decoration: none;
 }
 
+footer ul {
+    float: right;
+    width: 117px;
 
+}
 
 footer {
     background-color: var(--orange);
     color: var(--salmon);
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    height: 10%;
+    height: 5em;
+    padding-bottom: 18px;
 }
+
 
 .container-foot {
     margin: auto;
@@ -211,6 +241,12 @@ footer {
         background: #FFB562;
         /* padding: 10px 0; */
         width: 100%;
+        flex-direction: column;
+        align-items: center;
+        }
+
+        .nav-bar {
+            position: initial;
         }
 
     h1 {
@@ -219,6 +255,39 @@ footer {
         align-items: center;
         }
 
+    section .section-body {
+        border-top: 1px solid var(--blue);
+        border-width: 5px;
+        border-left: none;
+    }
+
+    .about, .work {
+        flex-direction: column;
+    }
+
+    .body-content {
+        align-items: center;
+    }
+
+    .cardsubtext {
+        font-size: .5em;
+        font-weight: 100;
+        }
+
+    .card {
+        border: solid 5px var(--orange);
+        width: 100%;
+        display: inline-block;
+        margin: .5%;
+        background-color: var(--orange);
+        position: relative;
+        box-sizing: border-box;
+        transition: .3s;
+    }
+
+    footer ul {
+        float: none;
+    }
 
     }
 
@@ -226,12 +295,17 @@ footer {
     @media only screen and (max-width: 320px) {
         nav li {
             color: var(--salmon);
-            display: inline-flex;
+            display: block;
             flex-direction: column;
             margin: 1em;
-            margin-top: 2.5em;
+            margin-top: 1.75em;
             list-style: none; 
+            text-align: center;
             }
+
+        .nav-bar ul {
+            padding-left: 0px;
+        }
     
         header {
             display: flex;
@@ -247,15 +321,38 @@ footer {
             padding: 1%;
             align-items: center;
             }
+
         footer li {
             text-align: left;
-            display: block;
+            display: inline;
             list-style: none;
             padding-right: 5%;
             margin-top: .3%;
             text-decoration: none;
+            font-size: smaller;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer ul {
+            width: 100%;
+            padding-left: 0;
+            text-align: center;
+            
+        }
+
+        .body-content {
+            width: 90%;
+            max-width: none;
         }
         
+        .card {
+            width: 100%;
+        }
     
         }
     
