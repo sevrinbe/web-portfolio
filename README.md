@@ -1,6 +1,6 @@
 ## HTML and CSS Web Portfolio
 
-    This is a web portfolio made with CSS and HTML. The goal of this project is to try and make the website responsive using flex as well as implementing skills learned with HTML and CSS.
+This is a web portfolio made with CSS and HTML. The goal of this project is to try and make the website responsive using flex as well as implementing skills learned with HTML and CSS.
 
 ## Why?
 
